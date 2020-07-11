@@ -1,0 +1,36 @@
+{
+    "AWSEBDockerrunVersionn":2,
+    "containerDefinitions":[
+        {
+            "name": "client",
+            "image": "naveenselvaraj/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name" : "server",
+            "image": "naveenselvaraj/multi-server",
+            "hostname": "api",
+            "essential": false 
+        },
+        {
+            "name" : "worker",
+            "image": "naveenselvaraj/multi-worker",
+            "hostname": "worker",
+            "essential": false 
+        },
+        {
+            "name" : "nginx",
+            "image": "naveenselvaraj/multi-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portmappings":[
+                {
+                    "hostPort":80,
+                    "containerPort":80
+                }
+            ],
+            "links":["client","server"]
+        }
+    ]
+}
