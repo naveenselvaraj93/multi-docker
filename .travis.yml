@@ -11,10 +11,10 @@ script:
 language: generic    
 
 after_sucess:
-    - docker build -t naveenselvaraj/multi-client ./client
-    - docker build -t naveenselvaraj/multi-nginx ./nginx
-    - docker build -t naveenselvaraj/multi-server ./server
-    - docker build -t naveenselvaraj/multi-worker ./worker
+    - docker build -t sundarsingh19/multi-client-n ./client
+    - docker build -t sundarsingh19/multi-nginx-n ./nginx
+    - docker build -t sundarsingh19/multi-server-n ./server
+    - docker build -t sundarsingh19/multi-worker-n ./worker
 
     #Login to the docker CLI
 
@@ -22,10 +22,10 @@ after_sucess:
 
     #take those images and push them to docker hub
 
-    - docker push naveenselvaraj/multi-client
-    - docker push naveenselvaraj/multi-nginx
-    - docker push naveenselvaraj/multi-server
-    - docker push naveenselvaraj/multi-worker
+    - docker push sundarsingh19/multi-client-n
+    - docker push sundarsingh19/multi-nginx-n
+    - docker push sundarsingh19/multi-server-n
+    - docker push sundarsingh19/multi-worker-n
 
 
 
