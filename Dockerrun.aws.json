@@ -27,7 +27,7 @@
             "image": "naveenselvaraj/multi-nginx",
             "hostname": "nginx",
             "essential": true,
-            "portmappings":[
+            "portMappings":[
                 {
                     "hostPort":80,
                     "containerPort":80
